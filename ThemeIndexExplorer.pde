@@ -7,6 +7,8 @@ Button btnContinue;
 Button btnPlausible; 
 Button btnIrrelevant;
 Button btnNotPlausible;
+Button btnLeft;
+Button btnRight;
 //Button btnG
 int row1, row2, counter;
 final int stateReadNotes = 0;
@@ -23,6 +25,8 @@ void setup() {
   btnIrrelevant = new Button(770, 290, 85, 20, "Irrelevant",180);
   btnPlausible = new Button(865, 290, 95, 20, "Plausible",180);
   btnNotPlausible = new Button(660, 290, 100, 20, "Not Plausible",180);
+  btnLeft = new Button(660, 320, 15, 20, "<",180);
+  btnRight = new Button(690, 320, 15, 20, ">",180);
   counter = 0;
 }
 
@@ -43,6 +47,10 @@ void draw() {
   btnPlausible.hover();
   btnNotPlausible.display();
   btnNotPlausible.hover();
+  btnLeft.display();
+  btnLeft.hover();
+  btnRight.display();
+  btnRight.hover();
   textAlign(LEFT);
   if (state==stateReadNotes) {
     fill(155);
@@ -160,10 +168,16 @@ void getNewRows() {
 
 void mouseReleased() {
   if (btnContinue.hov) {
-    if (counter>=6) {
+    if(counter == 4){
+      btnContinue.c = #D16969;
+      btnContinue.t = "Next click will reset terms...";
+      counter++;
+    } else if (counter>=6) {
       counter = 0;
       getNewRows();
     } else {
+      btnContinue.c = #DEDCB5;
+      btnContinue.t = "Continue...";
       counter++;
     }
   } else if (btnPlausible.hov) {
@@ -199,6 +213,8 @@ void mouseReleased() {
     println("Table saved!");
     counter = 0;
     getNewRows();
+  }  else if (btnLeft.hov) {
+    // TODO: add record review info
   }
 }
 void keyPressed() {
