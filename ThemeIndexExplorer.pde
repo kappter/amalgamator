@@ -2,6 +2,7 @@ Table tiTable; //<>//
 Table reTable;
 TableRow tr1;
 TableRow tr2;
+Timer timer;
 
 Button btnContinue;
 Button btnPlausible; 
@@ -9,6 +10,7 @@ Button btnIrrelevant;
 Button btnNotPlausible;
 Button btnLeft;
 Button btnRight;
+int secs =0;;
 //Button btnG
 int row1, row2, counter;
 final int stateReadNotes = 0;
@@ -16,21 +18,49 @@ final int statePlay = 1;
 int state = stateReadNotes;
 String notes="";
 
+int lS;
+int lM;
+int lH;
+int lMil;
+
+int uS;
+int uM;
+int uH;
+int uMil;
+
 void setup() {
   size(1000, 400);
+  timer = new Timer(1000);
+  timer.start();
+  lS = second();
+  lM = minute();
+  lH = hour();
+  lMil = millis();
+  uS = second();
+  uM = minute();
+  uH = hour();
+  uMil = millis();
   tiTable = loadTable("classification.csv", "header");
   reTable = loadTable("responses.csv", "header");
   getNewRows();
-  btnContinue = new Button(660, 260, 300, 20, "Continue...",#DEDCB5);
-  btnIrrelevant = new Button(770, 290, 85, 20, "Irrelevant",180);
-  btnPlausible = new Button(865, 290, 95, 20, "Plausible",180);
-  btnNotPlausible = new Button(660, 290, 100, 20, "Not Plausible",180);
-  btnLeft = new Button(660, 320, 15, 20, "<",180);
-  btnRight = new Button(690, 320, 15, 20, ">",180);
+  btnContinue = new Button(660, 260, 300, 20, "Continue...", #C5DBB5);
+  btnIrrelevant = new Button(770, 290, 85, 20, "Irrelevant", #DEDCB5);
+  btnPlausible = new Button(865, 290, 95, 20, "Plausible", #C5DBB5);
+  btnNotPlausible = new Button(660, 290, 100, 20, "Not Plausible", #CE8D85);
+  btnLeft = new Button(660, 320, 15, 20, "<", 180);
+  btnRight = new Button(690, 320, 15, 20, ">", 180);
   counter = 0;
 }
 
 void draw() {
+  if (timer.isFinished()) {
+    secs++;
+    timer.start();
+  }
+  int s = second();
+  int m = minute();
+  int h = hour();
+  int mil = millis();
   background(44, 48, 44);
   fill(33);
   rect(40, 80, 440, 100, 4);
@@ -51,6 +81,13 @@ void draw() {
   btnLeft.hover();
   btnRight.display();
   btnRight.hover();
+  fill(127);
+  textAlign(RIGHT);
+  text("Login Time: " + lH + ":" + lM + ":" + lS +" Mil:" + lMil, width-40, 15);
+  text("Current Time: " + h + ":" + m + ":" + s, width-40,30); //" Mil:" + mil, width-40, 30);
+  //text("Reset Time: " + uH + ":" + uM + ":" + uS +" Mil:" + uMil, width-40, 45);
+  text("Seconds to Reset: " + str(60-secs),width-40, 45); 
+  text("Seconds Elapsed: " + secs, width-40,60);
   textAlign(LEFT);
   if (state==stateReadNotes) {
     fill(155);
@@ -76,7 +113,7 @@ void drawUI() {
   fill(133);
   textSize(14);
   text("Is there a connection? You can decide.", 43, 273);
-  text("Click continue to advance the hierarchy of each topic, take a moment to take it in.", 43, 290);
+  text("Click continue to advance the hierarchy of each topic, take a moment to process it.", 43, 290);
   text("Type to add notes then click plausible, irrelevant or not plausible to record your entry.", 43, 307);
   text("Optional: click or drag on number line to change concept on the left.", 43, 324);
 
@@ -166,17 +203,29 @@ void getNewRows() {
   row2 = int(random(2, tiTable.getRowCount()));
 }
 
+boolean canAm(int secs) {
+  if(counter == 4) {
+    if(secs>60){
+      
+    }
+    uMil = 0;
+    return true;
+  } else {
+    return false;
+  }
+}
+
 void mouseReleased() {
-  if (btnContinue.hov) {
-    if(counter == 4){
-      btnContinue.c = #D16969;
+  if (btnContinue.hov) { // && canAm(lMil) && counter<=4) {
+    if (counter == 4) {
+      btnContinue.c = #CE8D85;
       btnContinue.t = "Next click will reset terms...";
       counter++;
     } else if (counter>=6) {
       counter = 0;
       getNewRows();
     } else {
-      btnContinue.c = #DEDCB5;
+      btnContinue.c = #C5DBB5;
       btnContinue.t = "Continue...";
       counter++;
     }
@@ -213,7 +262,7 @@ void mouseReleased() {
     println("Table saved!");
     counter = 0;
     getNewRows();
-  }  else if (btnLeft.hov) {
+  } else if (btnLeft.hov) {
     // TODO: add record review info
   }
 }
