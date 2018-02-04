@@ -27,5 +27,5 @@ Business logic notes for the Amalgamator:
     * Revisit and edit 
   * Posts and Edits can consist of the following:
    * Posts
-    * UserID, AmalgamationID, timedate, text only (stripped of scripts/markup) 
+    * UserID, AmalgamationID, timedate, 255 character text only (stripped of scripts/markup) response field, and status indicator (radio button) with options relating to: plausible, not plausible, and irrelevant.
    * Edits
