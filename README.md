@@ -9,7 +9,7 @@ A brainstorming app that uses Dewey Decimal, Roget's Thesaurus hierarchal data a
 Business logic notes for the Amalgamator (tough screen capture preventor if possibl):
 ## User Accounts:
   * Education level, age, location, one link to SM mandate, any other info is optional
-  * ##Post Frequency
+## Post Frequency
     * Only one Amalgamation can be exposed/produced to a user inside of one hour 
 ## AmaCredits 
   * 10 Amalgamations create 1 contribution point (post removal and/or abandonment of topic will decrement contribution points respectively.)
