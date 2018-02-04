@@ -4,7 +4,7 @@ A brainstorming app that uses Dewey Decimal, Roget's Thesaurus hierarchal data a
 
 ![Amalgamator App](https://github.com/kappter/amalgamator/blob/master/amalgamation.png)
 
-Business logic notes for the Amalgamator:
+Business logic notes for the Amalgamator (tough screen capture preventor if possibl):
   * User Accounts:
     * Education level, age, location, one link to SM mandate, any other info is optional
   * Post Frequency
@@ -29,3 +29,6 @@ Business logic notes for the Amalgamator:
    * Posts
     * UserID, AmalgamationID, timedate, 255 character text only (stripped of scripts/markup) response field, and status indicator (radio button) with options relating to: plausible, not plausible, and irrelevant.
    * Edits
+    * One 255 textonly field with support (twitter logic) for hashtags and URLs etc.
+    * Some kind of like or thumbs up counter for follow up posts to an amalgamation
+    * Motions: to remove comment, dis-associate user, etc.
