@@ -2,7 +2,7 @@
 
 A brainstorming app that uses Dewey Decimal, Roget's Thesaurus hierarchal data and your personal experience(s) to form possible connections. Requires Java 8.1 to run.
 
-“Throughout his life, Albert Einstein would retain the intuition and the awe of a child. He never lost his sense of wonder at the magic of nature's phenomena-magnetic fields, gravity, inertia, acceleration, light beams-which grown-ups find so commonplace. He retained the ability to hold two thoughts in his mind simultaneously, to be puzzled when they conflicted, and to marvel when he could smell an underlying unity. "People like you and me never grow old," he wrote a friend later in life. "We never cease to stand like curious children before the great mystery into which we were born.” Walter Isaacson: Einstein: His Life and Universe
+“Throughout his life, Albert Einstein ... retained the ability to hold two thoughts in his mind simultaneously, to be puzzled when they conflicted, and to marvel when he could smell an underlying unity. "People like you and me never grow old," he wrote a friend later in life. "We never cease to stand like curious children before the great mystery into which we were born.” Walter Isaacson: Einstein: His Life and Universe
 
 ![Amalgamator App](https://github.com/kappter/amalgamator/blob/master/amalgamation.png)
 
