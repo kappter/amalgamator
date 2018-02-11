@@ -6,7 +6,7 @@ A brainstorming app that uses Dewey Decimal, Roget's Thesaurus hierarchal data a
 
 ![Amalgamator App](https://github.com/kappter/amalgamator/blob/master/amalgamation.png)
 
-Business logic notes for the Amalgamator (tough screen capture preventor if possibl):
+Business logic notes for the Amalgamator (tough screen capture preventor if possible):
 ## User Accounts:
   * Education level, age, location, one link to SM mandate, any other info is optional
 ## Post Frequency
@@ -21,7 +21,7 @@ Business logic notes for the Amalgamator (tough screen capture preventor if poss
 ## Counts 
   * Global count of amalgamations made/left, pioneer achievements and veteran achievements include invites to new systems. 
 ## Notifications 
-  * Any time a user encounters an amalgamation (anon) or contributes/revisits an amalgamation that you are a current contributor on (you have not left) an alert containing a truncated portion of the contributions
+  * Any time a user encounters an amalgamation (anon) or contributes/revisits an amalgamation that you are a current contributor on (you have not left) an alert containing a truncated portion of the contributions will be sent
   * The only aditional information available to a user considering an amagamation post is the "high volume" notification and users may opt to skip or not contribute setting that id to the very last in a stack a one to many user to amalgamation data structure. 
 ## Modes of Use 
   * Focused
