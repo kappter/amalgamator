@@ -6,7 +6,7 @@ A brainstorming app that uses Dewey Decimal, Roget's Thesaurus hierarchal data a
 
 ![Amalgamator App](https://github.com/kappter/amalgamator/blob/master/amalgamation.png)
 
-Business logic notes for the Amalgamator (tough screen capture preventor if possible):
+Business logic notes for the Amalgamator (aggressive screen capture preventor if possible):
 ## User Accounts:
   * Education level, age, location, one link to SM mandate, any other info is optional
 ## Post Frequency
