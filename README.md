@@ -1,12 +1,12 @@
 # amalgamator
 
-A brainstorming app that uses Dewey Decimal, Roget's Thesaurus hierarchal data and your personal experience(s) to form possible connections. Requires Java 8.1 to run.
+Soon to be a web-based brainstorming app that uses Dewey Decimal, Roget's Thesaurus or other hierarchal data sources and your personal experience(s) to form possible connections. Requires Java 8.1 to run.
 
 “Throughout his life, Albert Einstein ... retained the ability to hold two thoughts in his mind simultaneously, to be puzzled when they conflicted, and to marvel when he could smell an underlying unity. "People like you and me never grow old," he wrote a friend later in life. "We never cease to stand like curious children before the great mystery into which we were born.” Walter Isaacson: Einstein: His Life and Universe
 
 ![Amalgamator App](https://github.com/kappter/amalgamator/blob/master/amalgamation.png)
 
-Business logic notes for the Amalgamator (aggressive screen capture preventor if possible):
+Business logic notes for the web Amalgamator (aggressive screen capture preventor if possible):
 ## User Accounts:
   * Education level, age, location, one link to SM mandate, any other info is optional
 ## Post Frequency
