@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #e0e0e0;
+}
+
+header p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section {
+    background-color: #2a2a2a;
+    padding: 15px;
+    width: 48%;
+    border: 1px solid #444;
+}
+
+.section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.notes {
+    background-color: #2a2a2a;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+}
+
+.notes h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.notes textarea {
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    padding: 10px;
+    resize: none;
+}
+
+.instructions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instructions p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+#continue-btn {
+    background-color: #ff6666;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#not-plausible-btn {
+    background-color: #666;
+    color: #fff;
+}
+
+#irrelevant-btn {
+    background-color: #ccc;
+    color: #000;
+}
+
+#plausible-btn {
+    background-color: #66cc66;
+    color: #fff;
+}
+
+.progress-bar {
+    background-color: #333;
+    height: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.progress {
+    background-color: #666;
+    height: 100%;
+    width: 50%; /* Adjust dynamically with JS */
+}
+
+.markers {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 0.8em;
+    color: #b0b0b0;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #b0b0b0;
+}
