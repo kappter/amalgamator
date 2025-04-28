@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+#app {
+    transition: all 0.3s ease;
+}
+button {
+    cursor: pointer;
+}
+input {
+    outline: none;
+}
