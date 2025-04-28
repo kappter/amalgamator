@@ -1,0 +1,8 @@
+/* Custom styles to complement Tailwind CSS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    transition: all 0.3s ease;
+}
