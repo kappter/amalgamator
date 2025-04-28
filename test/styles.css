@@ -1,8 +1,17 @@
 /* Custom styles to complement Tailwind CSS */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 #app {
     transition: all 0.3s ease;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
 }
