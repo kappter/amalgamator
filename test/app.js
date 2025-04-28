@@ -42,7 +42,7 @@ const submitNameBtn = document.getElementById('submitNameBtn');
 const existingAmalgamation = document.getElementById('existingAmalgamation');
 const existingNameEl = document.getElementById('existingName');
 const agreeBtn = document.getElementById('agreeBtn');
-const disagreeBtn = document.getElementById('disagreeBtn');
+const disagreeBtn = document.getElementByIFrame = document.getElementById('disagreeBtn');
 const nextPairBtn = document.getElementById('nextPairBtn');
 
 let currentTerms = [];
