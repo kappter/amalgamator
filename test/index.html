@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amalgamator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div id="app" class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">Amalgamator</h1>
+        <div id="authSection" class="text-center mb-4">
+            <button id="loginBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Login with Google</button>
+            <p id="userInfo" class="hidden mt-2"></p>
+            <button id="logoutBtn" class="hidden bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mt-2">Logout</button>
+        </div>
+        <div id="termsSection" class="hidden">
+            <div id="terms" class="text-center mb-4">
+                <p class="text-lg font-semibold"><span id="term1"></span> + <span id="term2"></span></p>
+            </div>
+            <div class="flex justify-center space-x-4 mb-4">
+                <button id="existingBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Existing Connection</button>
+                <button id="notRelevantBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Not Relevant</button>
+                <button id="potentialBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Has Potential</button>
+            </div>
+            <div id="potentialForm" class="hidden mt-4">
+                <input id="amalgamationName" type="text" placeholder="Name this amalgamation" class="w-full p-2 border rounded mb-2">
+                <button id="submitNameBtn" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 w-full">Submit Name</button>
+            </div>
+            <div id="existingAmalgamation" class="hidden mt-4">
+                <p>This amalgamation was named: <span id="existingName" class="font-semibold"></span></p>
+                <div class="flex justify-center space-x-4 mt-2">
+                    <button id="agreeBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Agree</button>
+                    <button id="disagreeBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Disagree</button>
+                </div>
+            </div>
+            <button id="nextPairBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 w-full mt-4">Next Pair</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
