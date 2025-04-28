@@ -1,8 +1,8 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, collection, addDoc, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { getFirestore, collection, addDoc, getDocs, updateDoc, doc, increment } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
-// Firebase configuration (replace with your own)
+// Firebase configuration (replace with your actual Firebase project config)
 const firebaseConfig = {
     apiKey: "YOUR_API_KEY",
     authDomain: "YOUR_AUTH_DOMAIN",
@@ -82,7 +82,7 @@ async function displayNewPair() {
     const existingKeys = Object.keys(amalgamations);
     if (existingKeys.length > 0 && Math.random() < 0.2) {
         const key = existingKeys[Math.floor(Math.random() * existingKeys.length)];
-        const [t1, t2] = key.split('|');
+        const [t1, t2] = amalgamations[key].terms;
         currentTerms = [t1, t2];
         term1El.textContent = t1;
         term2El.textContent = t2;
@@ -191,7 +191,7 @@ submitNameBtn.addEventListener('click', async () => {
 
 agreeBtn.addEventListener('click', async () => {
     if (!currentUser) return;
-    const key = `${currentTerms[0]}|${currentTerms[1]}`;
+    const key = currentTerms.join('|');
     const querySnapshot = await getDocs(collection(db, "amalgamations"));
     let docId = null;
     querySnapshot.forEach((doc) => {
@@ -215,7 +215,7 @@ agreeBtn.addEventListener('click', async () => {
 
 disagreeBtn.addEventListener('click', async () => {
     if (!currentUser) return;
-    const key = `${currentTerms[0]}|${currentTerms[1]}`;
+    const key = currentTerms.join('|');
     const querySnapshot = await getDocs(collection(db, "amalgamations"));
     let docId = null;
     querySnapshot.forEach((doc) => {
@@ -238,8 +238,3 @@ disagreeBtn.addEventListener('click', async () => {
 });
 
 nextPairBtn.addEventListener('click', displayNewPair);
-
-// Firestore increment helper
-const increment = (value) => {
-    return firebase.firestore.FieldValue.increment(value);
-};
