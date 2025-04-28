@@ -2,14 +2,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/fireba
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { getFirestore, collection, addDoc, getDocs, updateDoc, doc, increment } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
-// Firebase configuration (replace with your actual Firebase project config)
+// Firebase configuration (replace with your actual Firebase project config from Firebase Console)
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "YOUR_ACTUAL_API_KEY",
+    authDomain: "YOUR_ACTUAL_AUTH_DOMAIN",
+    projectId: "YOUR_ACTUAL_PROJECT_ID",
+    storageBucket: "YOUR_ACTUAL_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_ACTUAL_MESSAGING_SENDER_ID",
+    appId: "YOUR_ACTUAL_APP_ID"
 };
 
 // Initialize Firebase
@@ -168,7 +168,6 @@ submitNameBtn.addEventListener('click', async () => {
     if (!currentUser) return;
     const name = amalgamationNameInput.value.trim();
     if (name) {
-        const key = `${currentTerms[0]}|${currentTerms[1]}`;
         await addDoc(collection(db, "amalgamations"), {
             terms: currentTerms,
             name,
