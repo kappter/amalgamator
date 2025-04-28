@@ -98,14 +98,15 @@ async function displayNewPair() {
 
 // Handle Google login
 loginBtn.addEventListener('click', async () => {
-    const provider = new GoogleAuthProvider();
-    try {
-        await signInWithPopup(auth, provider);
-    } catch (error) {
-        console.error("Error during login:", error);
-    }
+  const provider = new GoogleAuthProvider();
+  try {
+    await signInWithPopup(auth, provider);
+  } catch (error) {
+    console.error("Error during login:", error);
+    userInfo.textContent = `Login failed: ${error.message}`;
+    userInfo.classList.remove('hidden');
+  }
 });
-
 // Handle logout
 logoutBtn.addEventListener('click', async () => {
     try {
