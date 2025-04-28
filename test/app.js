@@ -2,14 +2,15 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/fireba
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { getFirestore, collection, addDoc, getDocs, updateDoc, doc, increment } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
-// Firebase configuration (replace with your actual Firebase project config from Firebase Console)
+// Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_NEW_API_KEY",
-    authDomain: "amalgamator-c12fc.firebaseapp.com",
-    projectId: "amalgamator-c12fc",
-    storageBucket: "amalgamator-c12fc.appspot.com",
-    messagingSenderId: "276790521363",
-    appId: "YOUR_NEW_APP_ID"
+  apiKey: "AIzaSyDWDjvvb5ZIXDejiABYfuSZ-7g8-_9TPIw",
+  authDomain: "amalgamator-c12fc.firebaseapp.com",
+  projectId: "amalgamator-c12fc",
+  storageBucket: "amalgamator-c12fc.firebasestorage.app",
+  messagingSenderId: "276790521363",
+  appId: "1:276790521363:web:774c82f5771f9e928a99e6",
+  measurementId: "G-ESHLV554VT"
 };
 
 // Initialize Firebase
