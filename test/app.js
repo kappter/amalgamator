@@ -4,12 +4,12 @@ import { getFirestore, collection, addDoc, getDocs, updateDoc, doc, increment } 
 
 // Firebase configuration (replace with your actual Firebase project config from Firebase Console)
 const firebaseConfig = {
-    apiKey: "YOUR_ACTUAL_API_KEY",
-    authDomain: "YOUR_ACTUAL_AUTH_DOMAIN",
-    projectId: "YOUR_ACTUAL_PROJECT_ID",
-    storageBucket: "YOUR_ACTUAL_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_ACTUAL_MESSAGING_SENDER_ID",
-    appId: "YOUR_ACTUAL_APP_ID"
+    apiKey: "YOUR_NEW_API_KEY",
+    authDomain: "amalgamator-c12fc.firebaseapp.com",
+    projectId: "amalgamator-c12fc",
+    storageBucket: "amalgamator-c12fc.appspot.com",
+    messagingSenderId: "276790521363",
+    appId: "YOUR_NEW_APP_ID"
 };
 
 // Initialize Firebase
@@ -42,7 +42,7 @@ const submitNameBtn = document.getElementById('submitNameBtn');
 const existingAmalgamation = document.getElementById('existingAmalgamation');
 const existingNameEl = document.getElementById('existingName');
 const agreeBtn = document.getElementById('agreeBtn');
-const disagreeBtn = document.getElementByIFrame = document.getElementById('disagreeBtn');
+const disagreeBtn = document.getElementById('disagreeBtn');
 const nextPairBtn = document.getElementById('nextPairBtn');
 
 let currentTerms = [];
